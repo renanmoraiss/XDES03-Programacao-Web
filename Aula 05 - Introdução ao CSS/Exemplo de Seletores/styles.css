@@ -1,0 +1,35 @@
+h1 {
+    font-size: 32px;
+    text-align: center;
+    color: greenyellow;
+}
+
+p {
+    font-size: 14px;
+    color: blueviolet;
+    text-align: center;
+}
+
+.about-me {
+    font-size: 18px;
+    color: aqua;
+    text-align: center;
+}
+
+a[href="https://github.com"] {
+    color: green;
+}
+
+a[href="https://instagram.com"] {
+    color: darkgoldenrod;
+}
+
+footer {
+    background-color: black;
+}
+
+#my-name {
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}

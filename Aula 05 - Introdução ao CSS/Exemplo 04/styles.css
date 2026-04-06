@@ -1,0 +1,18 @@
+figure {
+    margin: 0 auto;
+    text-align: center;
+    width: 22%;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+figure > div {
+    border: 6px solid #95d6ff;
+    border-radius: 12px;
+    margin: 0px 25px;
+}
+
+img {
+    width: 180px;
+    height: 188px;
+}

@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+.pai {
+    display: flex;
+    justify-content: center;
+}
+
+.filho {
+    width: 180px;
+    height: 180px;
+    background-color: greenyellow;
+    border: 4px solid green;
+    margin: 0px 2px;
+}
