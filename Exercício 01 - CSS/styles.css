@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #E8D5B7;
+}
+
+header {
+    background: black;
+    padding: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    gap: 75px;
+    justify-content: center;
+    list-style: none;
+}
+
+ul > li > a {
+    color: white;
+    font-size: 16px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.secao-login {
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 15px;
+    width: 36%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#p-login {
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 33px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button {
+    font-size: 11px;
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1px 48px;
+    display: block;
+    margin: 19px auto 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input {
+    outline: none;
+    font-size: 10px;
+    font-weight: 600;
+    border: 2px solid gray;
+    border-radius: 7px;
+    width: 70%;
+    height: 30px;
+    padding: 0px 0px 0px 13px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section > p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+}

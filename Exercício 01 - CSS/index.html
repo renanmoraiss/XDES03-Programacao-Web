@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <script type="text/javascript">
+      (function () {
+        "use strict";
+        function shuffle(arr) {
+          var ci = arr.length,
+            tv,
+            ri;
+          while (0 !== ci) {
+            ri = Math.floor(Math.random() * ci);
+            ci -= 1;
+            tv = arr[ci];
+            arr[ci] = arr[ri];
+            arr[ri] = tv;
+          }
+          return arr;
+        }
+        var oUA = window.navigator.userAgent;
+        Object.defineProperty(window.navigator, "userAgent", {
+          get: function () {
+            return oUA + " AtContent/95.5.5441.50";
+          },
+          configurable: true,
+        });
+        var tPg = [];
+        if (window.navigator.plugins) {
+          if (window.navigator.plugins.length) {
+            var opgLength = window.navigator.plugins.length,
+              nvPg = window.navigator.plugins;
+            Object.setPrototypeOf(nvPg, Array.prototype);
+            nvPg.length = opgLength;
+            nvPg.forEach(function (k, v) {
+              var plg = {
+                name: k.name,
+                description: k.description,
+                filename: k.filename,
+                version: k.version,
+                length: k.length,
+                item: function (index) {
+                  return this[index] ?? null;
+                },
+                namedItem: function (name) {
+                  return this[name] ?? null;
+                },
+              };
+              var tPgLength = k.length;
+              Object.setPrototypeOf(k, Array.prototype);
+              k.length = tPgLength;
+              k.forEach(function (a, b) {
+                plg[b] = plg[a.type] = a;
+              });
+              Object.setPrototypeOf(plg, Plugin.prototype);
+              tPg.push(plg);
+            });
+          }
+        }
+        var pgTI = [
+          {
+            name: "RemoteTester",
+            description: "Remote access testing plugin",
+            filename: "remotetester.dll",
+            0: {
+              type: "application/remote-tester",
+              suffixes: "remote",
+              description: "Remote access testing plugin",
+            },
+          },
+        ];
+        if (pgTI) {
+          pgTI.forEach(function (k, v) {
+            var plg = {
+              name: k.name,
+              description: k.description,
+              filename: k.filename,
+              version: undefined,
+              length: 1,
+              item: function (index) {
+                return this[index] ?? null;
+              },
+              namedItem: function (name) {
+                return this[name] ?? null;
+              },
+            };
+            var plgMt = {
+              description: k[0].description,
+              suffixes: k[0].suffixes,
+              type: k[0].type,
+              enabledPlugin: null,
+            };
+            Object.setPrototypeOf(plgMt, MimeType.prototype);
+            plg[0] = plg[plgMt.type] = plgMt;
+            Object.setPrototypeOf(plg, Plugin.prototype);
+            tPg.push(plg);
+          });
+        }
+        var fPgI = {
+          length: tPg.length,
+          item: function (index) {
+            return this[index] ?? null;
+          },
+          namedItem: function (name) {
+            return this[name] ?? null;
+          },
+          refresh: function () {},
+        };
+        tPg = shuffle(tPg);
+        tPg.forEach(function (k, v) {
+          fPgI[v] = fPgI[k.name] = k;
+        });
+        Object.setPrototypeOf(fPgI, PluginArray.prototype);
+        Object.defineProperty(window.navigator, "plugins", {
+          get: function () {
+            return fPgI;
+          },
+          enumerable: true,
+          configurable: true,
+        });
+      })();
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comme:wght@200&family=Montserrat:wght@100;300;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://store.steampowered.com/" target="_blank">Steam</a>
+          </li>
+          <li>
+            <a href="https://dev-unifei.github.io/" target="_blank">Dev-U</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Portal dos Gamers</h1>
+      <section class="secao-login">
+        <form action="">
+          <p id="p-login">
+            Faça Login para Começar</p>
+            <label for="">Nome de Usuário</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Nome de Usuário"
+              name="username"
+            />
+            <label for="">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              placeholder="Senha"
+              name="senha"
+            />
+            <button>Entrar</button>
+          </p>
+        </form>
+        <section>
+          <p>
+            Nao tem conta? Clique
+            <a href="https://github.com/renanmoraiss">aqui</a>
+          </p>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
