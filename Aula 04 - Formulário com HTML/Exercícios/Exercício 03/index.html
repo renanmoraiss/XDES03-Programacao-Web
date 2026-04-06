@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizando Formulários</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <input type="text" name="nome-completo" id="nome-completo">
+            <label for="nome-completo">Nome Completo</label>
+            <input type="number" name="idade" id="idade">
+            <label for="idade">Idade</label>
+        </fieldset>
+        <fieldset>
+            <legend>Camiseta</legend>
+            <label for="tamanho-camiseta">Tamanho Camiseta</label>
+            <select id="tamanho-camiseta" name="tamanho-camiseta">
+                <option value="p">P</option>
+                <option value="m">M</option>
+                <option value="g">G</option>
+            </select>
+        </fieldset>
+        <button>Submeter</button>
+    </form>
+</body>
+</html>
