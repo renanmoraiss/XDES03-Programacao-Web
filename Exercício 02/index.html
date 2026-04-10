@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Exercício 02 - Jogo da Adivinhação</title>
+</head>
+<body>
+    <main class="wrapper">
+        <h1 class="game-title">Jogo da Adivinhação</h1>
+        <div class="container">
+            <div class="game-image">
+                <img class="figure" src="imagem.jpg" alt="Menino pensando">
+            </div>
+            <div class="areas">
+            <div class="area-of-thought">
+                <h2 class="area-title">Área do Pensamento</h2>
+                <p>Olá! Eu sou o Chat-Jequiti. Irei pensar em um número entre 'início' e 'fim'.</p>
+                <p>Após digitar os números clique em 'Pensar'</p>
+                <label for="numero-inicial">Início</label>
+                <input class="start-number" type="number" id="numero-inicial" name="numero-inicial">
+                <label for="numero-final">Fim</label>
+                <input class="end-number" type="number" id="numero-final" name="numero-final">
+                <button>Pensar</button>
+            </div>
+            <div class="machine-area">
+                <h2 class="area-title">Área da Adivinhação</h2>
+                <label for="numero-pensante">Qual número estou pensando?</label>
+                <input class="thinking-number" type="number" id="numero-pensante" name="numero-pensante">
+                <button>Adivinhar</button>
+            </div> 
+            </div>
+        </div>
+    </main>
+</body>
+</html>
