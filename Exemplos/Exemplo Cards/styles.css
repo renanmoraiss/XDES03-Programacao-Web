@@ -1,0 +1,172 @@
+*{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+h1{
+    text-align: center;
+    margin: 1rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "sidebar banner"
+    "sidebar main"
+    "footer footer"
+    ;
+    grid-template-columns: 15rem 1fr;
+    grid-template-rows: auto 13rem 1fr auto;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 100vh;
+}
+
+/* Areas do Grid */
+
+.header{
+    grid-area: header;
+    background: #333;
+    color: white;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Exemplo de Seletor descendentes */
+.nav-header > ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+
+/* Exemplo de Seletor descendentes */
+.nav-header > ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background: #ddd;
+    padding: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.1rem rgba(150,150,150,0.05);
+    /* Outro exemplo de Seletor descendentes
+    funcionario também .sidebar > ul
+     */
+    ul{
+        list-style: none;
+    }
+    border-radius: 0.8rem;
+}
+
+.banner{
+    grid-area: banner;
+    background-color: #333;
+    overflow: hidden;
+    img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        aspect-ratio: 6/1;
+        object-position: 50% 50%;
+    }
+    margin: 0 auto;
+}
+
+.footer {
+  grid-area: footer;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Fim Areas do Grid */
+
+
+
+/* Ajuste conteúdo dos cards */
+
+.cards{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 0.9rem;
+
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    box-shadow: .1rem .1rem .5rem rgb(188, 188, 188);
+    border-radius: 0.6rem;
+    gap: 1rem;
+}
+
+.card-img{
+    width: 95%;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+
+.btn-acao{
+    color: white;
+    background: #ff6f00;
+    width: 50%;
+    padding: 0.5rem 1rem;
+    margin-top: auto;
+    margin-bottom: 0.3rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: bold;
+
+}
+
+.card-descricao{
+    padding-left: 0.3rem;
+    line-height: 1.1rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.card-titulo{
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Ajuste conteúdo dos cards */
+
+/* Ajuste Sidebar */
+
+.sidebar-menu > li {
+  display: block;
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.5rem;
+
+  text-decoration: none;
+  color: #444;
+
+  transition: all 0.2s ease;
+}
+
+/* Hover nos items no sidebar */
+.sidebar-menu li:hover {
+  background: #f2f2f2;
+  color: #000;
+}
+
+/* Fim Ajuste Sidebar */

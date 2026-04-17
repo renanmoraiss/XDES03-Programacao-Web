@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comme', sans-serif; 
+}
+
+.content{
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+img{
+    border-radius: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+h1{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#p-resposta{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.area-jogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+}
+.area-adv, .area-pensamento{
+    line-height: 3rem;
+}
+
+@media(min-width: 1025px){
+    .content{
+        width: 90%;
+    }
+}
+
+@media(min-width: 1400px){
+    .content{
+        width: 60%;
+        min-height: fit-content;
+    }
+}
+
+@media(min-width: 2000px){
+    .content{
+        width: 40%;
+        min-height: fit-content;
+    }
+}

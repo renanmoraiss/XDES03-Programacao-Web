@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhacao</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Comme:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Solução com Flexbox e Media Querie -->
+   <main>
+        <h1>Jogo da Adivinhação</h1>
+        <div class="content">
+            <div class="img">
+                <img src="figuras/figura-exercicio.jpg" alt="">
+            </div>
+            <div class="area-jogo">
+                <div class="area-pensamento">
+                    <h2>Área do Pensamento</h2>
+                    <p>Olá! Eu sou o Chat-Jequiti. Irei pensar em um número entre "início" e "fim".</p>
+                    <p>Após digitar os números clique em 'Pensar'</p>
+                    <label for="inicio">Início</label>
+                    <input type="number" name="inicio" id="inicio">
+                    <label for="fim">Fim</label>
+                    <input type="number" name="fim" id="fim">
+                    <button id="btn-gerar">Gerar Número</button>
+                    <h3 id="numeroGerado"></h3>
+                </div>
+                <div class="area-adv">
+                    <h2>Área da Adivinhação</h2>
+                    <label for="adv">Qual número estou pensando?</label>
+                    <input type="number" name="adv" id="adv">
+                    <button id="btn-adv">Adivinhar</button>
+                </div>
+            </div>
+        </div>
+        <p id="p-resposta"></p>
+   </main>
+   <script src="main.js"></script>
+</body>
+</html>
